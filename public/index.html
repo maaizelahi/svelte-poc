@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width,initial-scale=1'>
+
+	<title>Svelte app</title>
+
+	<link rel='icon' type='image/png' href='/favicon.png'>
+	<!-- <link rel='stylesheet' href='/global.css'>
+	<link rel='stylesheet' href='/build/bundle.css'> -->
+
+	<!-- <script defer src='/build/bundle.js'></script> -->
+	<script type="module" defer src='/build/counter.js'></script>
+	<script type="module" defer src='/build/requestInfo.js'></script>
+	<script type="module" defer src='/build/requestInfoFull.js'></script>
+</head>
+
+
+
+<body>
+	<h1>Rendering widgets as web components</h1>
+	<my-counter></my-counter>
+	<my-counter></my-counter>
+	<my-counter></my-counter>
+	<request-info></request-info>
+	<request-info-full id="request-1" method="POST" title="Generate Access Token" url="https://api.imgur.com/oauth2/token" description="iven a users refresh token, this endpoint generates an access token."></request-info-full>
+	<request-info-full id="request-1" method="GET" title="Comment" url="https://api.imgur.com/3/comment/123" description="Get information about a specific comment."></request-info-full>
+	<request-info-full id="request-1" method="POST" title="Comment" url="https://api.imgur.com/3/comment" description="Create a comment"></request-info-full>
+
+	<!-- <request-info-full id="request-1" requestobj='{"method": "POST", "title": "Generate Access Token", "url": "https://api.imgur.com/oauth2/token", "description": "Given a users refresh token, this endpoint generates an access token."}'></request-info-full>
+	<request-info-full id="request-2" requestobj='{"method": "GET", "title": "Comment", "url": "https://api.imgur.com/3/comment/{{commentId}}", "description": "Get information about a specific comment."}'></request-info-full>
+	<request-info-full id="request-3" requestobj='{"method": "POST", "title": "Comment", "url": "https://api.imgur.com/3/comment/{{commentId}}", "description": "Get information about a specific comment."}'></request-info-full> -->
+</body>
+
+<script>
+	// let requests = [ {
+    //     method: "POST",
+    //     title: "Generate Access Token",
+    //     url: "https://api.imgur.com/oauth2/token",
+    //     description: "Given a user's refresh token, this endpoint generates an access token."
+    // },
+	// {
+    //     method: "GET",
+    //     title: "Comment",
+    //     url: "https://api.imgur.com/3/comment/{{commentId}}",
+    //     description: "Get information about a specific comment."
+    // },
+	// {
+    //     method: "POST",
+    //     title: "Comment",
+    //     url: "https://api.imgur.com/3/comment/{{commentId}}",
+    //     description: "Create a new Comment."
+    // }]
+
+	// requests.forEach(request => {
+		
+	// let requestStr = JSON.stringify(request);
+	// 	var myEscapedJSONString = requestStr.replace(/\\n/g, "\\n")
+	// 		.replace(/\\'/g, "\\'")
+	// 		.replace(/\\"/g, '\\"')
+	// 		.replace(/\\&/g, "\\&")
+	// 		.replace(/\\r/g, "\\r")
+	// 		.replace(/\\t/g, "\\t")
+	// 		.replace(/\\b/g, "\\b")
+	// 		.replace(/\\f/g, "\\f");
+		
+	// 	console.log(JSON.stringify(myEscapedJSONString));
+		
+	// 	document.body.innerHTML += "<request-info-full requestObj=" + myEscapedJSONString + "></request-info-full>"
+	// });
+</script>
+</html>

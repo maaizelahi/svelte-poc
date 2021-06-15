@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module" defer src='/build/requestInfoFull.js'></script>
+</head>
+<body>
+    <request-info-full id="request-1"></request-info-full>
+    
+    <script>
+        
+        console.log(window.location.search);
+        let searchParams = new URL(window.location).searchParams;
+        let element = document.querySelector('request-info-full');
+        for (const [key, value] of searchParams.entries()) {
+            element.setAttribute(key, value);
+            console.log(key, value);
+        }
+    </script>
+</body>
+</html>
