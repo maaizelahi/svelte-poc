@@ -1,7 +1,6 @@
 {
-  "name": "svelte-poc",
+  "name": "@maaizelahi/svelte-poc",
   "version": "1.0.0",
-  "private": true,
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
@@ -20,5 +19,17 @@
   },
   "dependencies": {
     "sirv-cli": "^1.0.0"
-  }
+  },
+  "description": "*Looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*",
+  "main": "rollup.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maaizelahi/svelte-poc.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maaizelahi/svelte-poc/issues"
+  },
+  "homepage": "https://github.com/maaizelahi/svelte-poc#readme"
 }
